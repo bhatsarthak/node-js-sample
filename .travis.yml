@@ -1,12 +1,16 @@
 language: node_js
 node_js:
-  - "6"
-  - "6.1"
-  - "5.11"
-  - "iojs"
-before_install:
-install:
-before_script:
+- '6'
+- '6.1'
+- '5.11'
+- iojs
+before_install: 
+install: 
+before_script: 
 script:
-  - "./node_modules/mocha/bin/mocha test/test.js"
-
+###- "./node_modules/mocha/bin/mocha test/test.js"
+deploy:
+  provider: heroku
+  app: node-js-test-spacemonk
+  api_key:
+    secure: ZX3y8vRgLr9TRSfuJMAvTdTynJZUIf6aQbhHzenu10zr2XRqPprDveTVrka5DWBXCEmv8yr8st+2g7W3TQkY4fTNGCkZvjMrVO3AUhZIVRGeWOzQQi6q0jVSKMxNwfjKY81lEPm7Rp5AMLN9uUMgYg1tU6pcyz4DhrPnYn6haXKkzdHkYO6fAQnorqKRl6+3ouK2vpT02+w+mmFxgki9WA/3CDqiK7olLD3hUwR3eBzvmmzhO6w01d8aN0fPaePrFrKLGJrfSMW4y/mfgTNZRjFp+j6J5gVmD4ncPRdD7RF1IcCl0AxqNAM+Sc9Kzd7xNRth+BGBZRgvt8mxGkq9Odya4pjR0w2JmUSZm7v3KZwvGG2blkljq2dxqAUPsy1jvxQ/DX0WKG1m6ZnyRJy5dpZBQmngNZHYpkloO9RJdcyGZSO8HTx4ApMMYOVWXGqPv4El/Y1HoZGNiNWTEQgNzzQJQxNQBpRgs3P2S8z0TX35jks42CduZR13WAt8fKAe0CvAQl7d/8bxYVDVnvBHX6MX/equZaUXsLzI2zLvY+T9qA52tdLtJpVkjY0iH/pwJTfPPNPRoS/ZOP3QxqkeRdQk2fah1JESQbs1aqyp0ypSwis/Vl4fyj8ljxkECca4baCO3hePv/tNOHnebH5yYR4EotY5/fDdM4dS9MOwkNU=
