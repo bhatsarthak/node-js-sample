@@ -8,4 +8,5 @@ before_install:
 install:
 before_script:
 script:
+  - "./node_modules/mocha/bin/mocha test/test.js"
 
